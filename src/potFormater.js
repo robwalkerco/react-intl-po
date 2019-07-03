@@ -79,7 +79,7 @@ const potFormater = messageObject =>
             `${potCommentsFormater(
               messageObject[id][context],
             )}${potContextsFormater(context)}msgid ${JSON.stringify(
-              id,
+              messageObject[id][context][0].id,
             )}\n${potStringFormater(
               messageObject[id][context][0].defaultMessage,
             )}\n`,
